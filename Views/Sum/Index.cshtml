@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Suma Números";
+}
+
+<form method="post">
+    <div>
+        <label for="number1">Número 1:</label>
+        <input type="number" id="number1" name="num1" required />
+    </div>
+    <div>
+        <label for="number2">Número 2:</label>
+        <input type="number" id="number2" name="num2" required />
+    </div>
+    <button type="submit">Calcular Suma</button>
+</form>
+
+@if (ViewBag.Sum != null) @* Si el resultado no trae un nulo que continue y debe de tener que ser el mismo nombre del controlador *@ 
+{
+    <h3>La suma es: @ViewBag.Sum</h3>
+}
